@@ -1,8 +1,13 @@
-import React from 'react'
-import s from './FriendMessage.module.css'
+import React from 'react';
+import s from './FriendMessage.module.css';
+import {MessageType} from '../HW1';
 
 // создать тип вместо any и отобразить приходящие данные
-const FriendMessage = (props: any) => {
+type FriendMessagePropsType = {
+    message: MessageType
+}
+
+const FriendMessage = (props: FriendMessagePropsType) => {
     return (
         <div
             id={'hw1-friend-message-' + props.message.id}
@@ -11,7 +16,10 @@ const FriendMessage = (props: any) => {
             <div className={s.friendImageAndText}>
                 <img
                     id={'hw1-friend-avatar-' + props.message.id}
+                    alt={'friends-avatar'}
                     // создаёт студент
+                    //src={props.message.user.avatar}
+                    src={'https://www.tadviser.ru/images/thumb/5/5a/Snowden_1413969762.jpg/840px-Snowden_1413969762.jpg'}
 
                     //
                 />
@@ -21,7 +29,7 @@ const FriendMessage = (props: any) => {
                         className={s.friendName}
                     >
                         {/*создаёт студент*/}
-
+                        {props.message.user.name}
                         {/**/}
                     </div>
                     <pre
@@ -29,7 +37,7 @@ const FriendMessage = (props: any) => {
                         className={s.friendMessageText}
                     >
                         {/*создаёт студент*/}
-
+                        {props.message.message.text}
                         {/**/}
                     </pre>
                 </div>
@@ -39,11 +47,11 @@ const FriendMessage = (props: any) => {
                 className={s.friendTime}
             >
                 {/*создаёт студент*/}
-
+                {props.message.message.time}
                 {/**/}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default FriendMessage
+export default FriendMessage;

@@ -7,7 +7,10 @@
 }
 
 .friendImageAndText img {
-
+    height: 48px;
+    width: 48px;
+    background-size: contain;
+    border-radius: 50px;
 }
 
 .friendText {
