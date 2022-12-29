@@ -38,8 +38,8 @@ export const message0: MessageType = {
         name: 'Ivan',  // можно менять
     },
     message: {
-        text: 'Hello, how are you, what did you do yesterday?', // можно менять
-        time: '09:00', // можно менять
+        text: 'Hello, didn’t do anything and rested all day, how are you?', // можно менять
+        time: '09:01', // можно менять
     },
 };
 
@@ -47,21 +47,21 @@ export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Ivan', // можно менять
+        name: 'John', // можно менять
     },
     message: {
-        text: 'Hello, she didn’t do anything and rested all day, how are you?', // можно менять
-        time: '09:01', // можно менять
+        text: 'Hello, how are you, what did you do yesterday?', // можно менять
+        time: '09:00', // можно менять
     },
 };
 
 const HW1 = () => {
     return (
-        <div id={'hw1'}>
+        <div id={'hw1'} className={s2.container}>
             <div className={s2.hwTitle}>Hometask № 1</div>
             <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
-                <div>
+                <div className={s2.messagesBlock}>
                     <Message message={message0}/>
                     <FriendMessage message={friendMessage0}/>
                 </div>

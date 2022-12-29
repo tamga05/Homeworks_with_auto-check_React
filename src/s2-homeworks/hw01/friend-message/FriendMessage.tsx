@@ -14,15 +14,25 @@ const FriendMessage = (props: FriendMessagePropsType) => {
             className={s.friendMessage}
         >
             <div className={s.friendImageAndText}>
-                <img
+                <div className={s.avatarTime}>
+                    <img
                     id={'hw1-friend-avatar-' + props.message.id}
-                    alt={'friends-avatar'}
                     // создаёт студент
-                    //src={props.message.user.avatar}
-                    src={'https://www.tadviser.ru/images/thumb/5/5a/Snowden_1413969762.jpg/840px-Snowden_1413969762.jpg'}
-
-                    //
+                    src={props.message.user.avatar}
+                    alt={'friends-avatar'}
                 />
+                    <div
+                        id={'hw1-friend-time-' + props.message.id}
+                        className={s.friendTime}
+                    >
+                        {/*создаёт студент*/}
+                        {props.message.message.time}
+                        {/**/}
+                    </div>
+                </div>
+                <div className={s.corner}>
+                    <div className={s.cornerInner}></div>
+                </div>
                 <div className={s.friendText}>
                     <div
                         id={'hw1-friend-name-' + props.message.id}
@@ -42,14 +52,7 @@ const FriendMessage = (props: FriendMessagePropsType) => {
                     </pre>
                 </div>
             </div>
-            <div
-                id={'hw1-friend-time-' + props.message.id}
-                className={s.friendTime}
-            >
-                {/*создаёт студент*/}
-                {props.message.message.time}
-                {/**/}
-            </div>
+
         </div>
     );
 };

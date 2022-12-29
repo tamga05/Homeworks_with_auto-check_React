@@ -13,14 +13,6 @@ const Message = (props: MessagePropsType) => {
     return (
         <div id={'hw1-message-' + props.message.id} className={s.message}>
             <div className={s.imageAndText}>
-                <img
-                    id={'hw1-avatar-' + props.message.id}
-                    alt={'my-avatar'}
-                    // создаёт студент
-                    src={props.message.user.avatar}
-                    //src={'https://www.tadviser.ru/images/thumb/5/5a/Snowden_1413969762.jpg/840px-Snowden_1413969762.jpg'}
-                    //
-                />
                 <div className={s.text}>
                     <div id={'hw1-name-' + props.message.id} className={s.name}>
                         {/*создаёт студент*/}
@@ -33,12 +25,26 @@ const Message = (props: MessagePropsType) => {
                         {/**/}
                     </pre>
                 </div>
+                <div className={s.corner}>
+                    <div className={s.cornerInner}></div>
+                </div>
+                <div className={s.avatarTime}>
+                    <img
+                        id={'hw1-avatar-' + props.message.id}
+                        // создаёт студент
+                        src={props.message.user.avatar}
+                        //src={'https://www.tadviser.ru/images/thumb/5/5a/Snowden_1413969762.jpg/840px-Snowden_1413969762.jpg'}
+                        //
+                        alt={'my-avatar'}
+                    />
+                    <div id={'hw1-time-' + props.message.id} className={s.time}>
+                        {/*создаёт студент*/}
+                        {props.message.message.time}
+                        {/**/}
+                    </div>
+                </div>
             </div>
-            <div id={'hw1-time-' + props.message.id} className={s.time}>
-                {/*создаёт студент*/}
-                {props.message.message.time}
-                {/**/}
-            </div>
+
         </div>
     );
 };
