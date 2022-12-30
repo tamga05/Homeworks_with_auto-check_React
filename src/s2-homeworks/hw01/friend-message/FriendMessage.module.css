@@ -14,8 +14,6 @@
 .friendImageAndText img {
     height: 48px;
     width: 48px;
-    /*background-size: contain;*/
-    /*border-radius: 50px;*/
 }
 
 .friendText {
@@ -33,7 +31,6 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 8px 13px;
-    /*position: relative;*/
 }
 
 .corner{
@@ -55,9 +52,6 @@
 }
 
 .friendName {
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
-
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;

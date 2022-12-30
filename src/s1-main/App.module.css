@@ -15,11 +15,8 @@
 }
 
 .hwTitle {
-    /*position: absolute;*/
     width: 165px;
     height: 27px;
-    /*left: 70px;*/
-    /*top: 131px;*/
     margin-left: 70px;
     margin-bottom: 10px;
 
@@ -29,7 +26,6 @@
     font-size: 22px;
     line-height: 27px;
     color: #000000;
-    /* identical to box height */
 }
 
 .messagesBlock {
